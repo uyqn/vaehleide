@@ -1,0 +1,44 @@
+@keyframes rotate-45 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+    }
+}
+
+@keyframes rotate-45-reversed {
+    from {
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate-neg-45 {
+    from {
+        transform: rotate(-45deg) translateY(-6px) translateX(6px);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate-neg-45 {
+    from {
+        transform: rotate(0deg);
+    }
+    t {
+        transform: rotate(-45deg) translateY(-6px) translateX(6px);
+    }
+}
+
+.animate-burger-line-1 {
+    animation: rotate-45 250ms ease-in forwards;
+}
+
+.animate-burger-line-3 {
+    animation: rotate-neg-45 250ms ease-in forwards;
+}
+
