@@ -19,7 +19,7 @@ export const NavigationBar: FunctionComponent<NavigationBarProps> = ({
   const size = useWindowWidthSizeObserver();
 
   return (
-    <nav className="flex flex-col items-center backdrop-blur p-4 fixed top-0 w-full sm:flex-row">
+    <nav className="flex flex-col z-20 items-center backdrop-blur p-4 fixed top-0 w-full shadow-sm bg-white/75 sm:flex-row">
       <BurgerMenu
         className="flex flex-col gap-1 sm:hidden"
         onClick={() => setShowMenu((prevState) => !prevState)}

@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       nav: ['"Roboto"', '"Helvetica Neue"', "sans-serif"],
+      hero: ['"Dancing Script"', '"Georgia"', "serif"],
     },
     extend: {
       backgroundImage: {

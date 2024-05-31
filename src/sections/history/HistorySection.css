@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#history {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply p-80;
+    text-align: center;
+}
+
+#history * {
+    font-family: "Dancing Script", cursive;
+}
+
+#history h1 {
+    @apply text-9xl;
+    @apply font-bold;
+    @apply mb-5;
+}
+
+#history p {
+    @apply text-4xl;
+    @apply mb-5;
+}
