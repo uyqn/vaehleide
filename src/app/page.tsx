@@ -1,10 +1,11 @@
-import Image from "next/image";
-import { NavigationBar } from "@/components/navigationBar/NavigationBar";
+import { HeroSection } from "@/sections/hero/HeroSection";
+import { HistorySection } from "@/sections/history/HistorySection";
 
 export default function Home() {
   return (
     <main className="h-full">
-      <NavigationBar />
+      <HeroSection />
+      <HistorySection />
     </main>
   );
 }

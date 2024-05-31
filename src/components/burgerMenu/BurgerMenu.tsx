@@ -16,6 +16,7 @@ type BurgerMenuProps = DetailedHTMLProps<
 >;
 
 export const BurgerMenu: FunctionComponent<BurgerMenuProps> = ({
+  onClick,
   ...props
 }) => {
   const [active, setActive] = useState(false);
@@ -23,9 +24,9 @@ export const BurgerMenu: FunctionComponent<BurgerMenuProps> = ({
   const handleOnClick: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
       setActive((prevState) => !prevState);
-      props.onClick?.(event);
+      if (onClick) onClick(event);
     },
-    [props],
+    [onClick],
   );
 
   return (
