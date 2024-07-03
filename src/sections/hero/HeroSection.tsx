@@ -9,7 +9,7 @@ export const HeroSection: FunctionComponent<HeroSectionProps> = ({
   ...props
 }) => {
   return (
-    <Section id="home" className="relative flex">
+    <Section id="home" className="hero-section">
       <Image
         className="hero-img"
         alt="something"

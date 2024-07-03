@@ -13,31 +13,20 @@ import classNames from "classnames";
 type BurgerMenuProps = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
->;
+> & { open?: boolean };
 
 export const BurgerMenu: FunctionComponent<BurgerMenuProps> = ({
-  onClick,
+  open,
   ...props
 }) => {
-  const [active, setActive] = useState(false);
-
-  const handleOnClick: MouseEventHandler<HTMLButtonElement> = useCallback(
-    (event) => {
-      setActive((prevState) => !prevState);
-      if (onClick) onClick(event);
-    },
-    [onClick],
-  );
-
   return (
     <button
       className={classNames("flex flex-col gap-1", props.className)}
-      onClick={handleOnClick}
       {...props}
     >
-      <BurgerLine rotate={active ? 45 : 0} translateY={active ? "8px" : 0} />
-      <BurgerLine opacity={active ? 0 : 1} />
-      <BurgerLine rotate={active ? -45 : 0} translateY={active ? "-8px" : 0} />
+      <BurgerLine rotate={open ? 45 : 0} translateY={open ? "8px" : 0} />
+      <BurgerLine opacity={open ? 0 : 1} />
+      <BurgerLine rotate={open ? -45 : 0} translateY={open ? "-8px" : 0} />
     </button>
   );
 };

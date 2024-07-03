@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#information {
+    @apply bg-tertiary;
+}
+
+#information * {
+    font-family: Roboto, sans-serif;
+}
+
+#information div {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-10;
+    @apply justify-center;
+    @apply p-20;
+}
+
+#information div h1 {
+    @apply text-5xl;
+    @apply font-bold;
+    @apply mb-5;
+    @apply text-center;
+}
+
+#information div iframe {
+    @apply rounded;
+    width: 100%;
+    height: 450px;
+}

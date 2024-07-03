@@ -23,6 +23,7 @@ export const NavigationBar: FunctionComponent<NavigationBarProps> = ({
       <BurgerMenu
         className="flex flex-col gap-1 sm:hidden"
         onClick={() => setShowMenu((prevState) => !prevState)}
+        open={showMenu}
       />
       <motion.ul
         className="flex flex-col justify-evenly items-center font-nav w-full overflow-hidden sm:flex-row sm:overflow-auto sm:h-auto"
@@ -39,6 +40,9 @@ export const NavigationBar: FunctionComponent<NavigationBarProps> = ({
         </NavLink>
         <NavLink href="#history" onClick={() => setShowMenu(false)}>
           VÅR HISTORIE
+        </NavLink>
+        <NavLink href="#information" onClick={() => setShowMenu(false)}>
+          INFORMASJON
         </NavLink>
         {/*<NavLink href="/" onClick={() => setShowMenu(false)}>
           BRYLLUPET

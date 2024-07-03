@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 type Size = "sm" | "md" | "lg" | "xl" | "2xl";
 
-const getWindowWidthSize = (window: Window) => {
+const getWindowWidthSize = (window?: Window) => {
+  if (!window) return undefined;
   const width = window.innerWidth;
   if (width < 640) {
     return "sm";
@@ -18,9 +19,12 @@ const getWindowWidthSize = (window: Window) => {
 };
 
 export const useWindowWidthSizeObserver = () => {
-  const [size, setSize] = useState<Size>(getWindowWidthSize(window));
+  const [size, setSize] = useState<Size | undefined>(
+    getWindowWidthSize(window),
+  );
 
   useEffect(() => {
+    if (!window) return;
     const handleResize = () => setSize(getWindowWidthSize(window));
     window.addEventListener("resize", handleResize);
     return () => {

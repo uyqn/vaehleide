@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-section {
+    @apply bg-amber-300;
+    height: 100dvh;
+    width: 100%;
+}
+
 .hero-img {
-    @apply block;
-    margin: 0 auto;
+    @apply hidden;
 }
 
 .hero-card {
@@ -17,9 +22,8 @@
     top: 80px;
     right: calc((100% - var(--card-size)) / 2);
     width: var(--card-size);
-    @apply bg-secondary/20;
+    @apply text-gray-700;
     @apply rounded;
-    @apply shadow-xl;
     @apply text-center;
     @apply font-hero;
 }
